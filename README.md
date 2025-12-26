@@ -1,2 +1,3 @@
 # bang-dream
-Pagina simple de badoi
+Pagina simple de bandori
+
