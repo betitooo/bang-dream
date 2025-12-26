@@ -1,3 +1,188 @@
-# bang-dream
-Pagina simple de bandori
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Bandori</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url("imagenes/portada.webp") no-repeat center center fixed;
+  background-size: cover;
+}
+.collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.video-card {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+  min-height: 350px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.video-card:hover {
+  transform: translateY(-10px);
+
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  border: 1px solid #000;
+}
+.btn-descargar {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: orange;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-descargar:hover {
+  background: #ffb347;
+  transform: scale(1.05);
+}
+h1 {
+    text-align: center;
+    color: white;                  
+    background-color: orange;                  
+    border-bottom: 3px solid black; 
+    padding: 20px 0;               
+    width: 100%;                   
+    box-sizing: border-box;        
+    margin-bottom: 50px; 
+}
+ h2 {
+    text-align: center;
+    color: white;                  
+    background-color: orange;                  
+    border-bottom: 3px solid black; 
+    padding: 20px 0;               
+    width: 100%;                   
+    box-sizing: border-box;        
+    margin-bottom: 50px; 
+}
+
+
+
+  .galeria {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    height: 80vh; 
+    gap: 15px; 
+    padding: 10px 0;
+    box-sizing: border-box;
+        margin-bottom: 30px;
+  }
+
+  .foto {
+    flex: 1; 
+    max-width: 300px; 
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+
+  }
+
+  .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+
+  }
+
+  /* Efecto al pasar el mouse */
+  .foto:hover {
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255,255,255,0.5);
+  }
+
+
+.video-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 60px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+  .video-container video {
+    width: 100%; 
+    max-width: 1000px; 
+    height: auto; 
+  border-radius: 15px;
+  border:   border: 2px black; 
+  }
+
+.btn-descargar:hover {
+  background: orangered;
+  transform: scale(1.05);
+}
+
+</style>
+</head>
+<body>
+
+<h1>Kasumi toyama</h1>
+
+<div class="galeria">
+  <div class="foto"><img src="imagenes/kasumi.jpg" alt="Kasumi 1"></div>
+  <div class="foto"><img src="imagenes/kasumi2.jpg" alt="Kasumi 2"></div>
+  <div class="foto"><img src="imagenes/kasumi3.webp" alt="Kasumi 3"></div>
+  <div class="foto"><img src="imagenes/kasumi4.png" alt="Kasumi 4"></div>
+
+</div>
+
+<h2>Galeria Videos Popy Party y Mygo</h2>
+
+<div class="collage">
+
+  <div class="video-card">
+    <video controls>
+      <source src="videos/popy.mp4" type="video/mp4">
+    </video>
+    <a href="videos/popy.mp4" download class="btn-descargar">Descargar</a>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="videos/popy2.mp4" type="video/mp4">
+    </video>
+    <a href="videos/popy2.mp4" download class="btn-descargar">Descargar</a>
+  </div>
+
+  <div class="video-card">
+    <video controls>
+      <source src="videos/popy3.mp4" type="video/mp4">
+    </video>
+    <a href="videos/popy3.mp4" download class="btn-descargar">Descargar</a>
+  </div>
+  </video>
+</div>
+
+</body>
+</html>
